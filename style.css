@@ -1,0 +1,204 @@
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  --ff-base: "League Spartan", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 500;
+  --fw-bolder: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  font-family: var(--ff-base);
+}
+
+main {
+  margin: 1rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+}
+
+.heading {
+  text-align: center;
+
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.title__heading {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  color: var(--Very-Dark-Magenta);
+  font-weight: var(--fw-bolder);
+}
+
+.para__heading {
+  margin-top: 0.5rem;
+  color: var(--Dark-Grayish-Magenta);
+}
+
+.review {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.img {
+  display: flex;
+  flex-direction: row;
+}
+
+.review__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--Light-Grayish-Magenta);
+  color: var(--Very-Dark-Magenta);
+  font-weight: var(--fw-bolder);
+}
+
+.review__section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.card__review {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+
+  padding: 2rem;
+  border: 1rem;
+  border-radius: 1rem;
+}
+
+.img__name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.img__name {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.verified {
+  color: var(--Soft-Pink);
+  font-weight: var(--fw-bolder);
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    margin: 5rem;
+  }
+
+  .grid__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .card1 {
+    transform: translateX(-50px);
+  }
+
+  .card2 {
+    transform: translateX(0px);
+  }
+
+  .card3 {
+    transform: translateX(50px);
+  }
+
+  .review__card {
+    flex-direction: row;
+  }
+
+  .review__section {
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .card_1 {
+    transform: translateY(-25px);
+  }
+
+  .card_2 {
+    transform: translateY(0px);
+  }
+
+  .card_3 {
+    transform: translateY(25px);
+  }
+}
